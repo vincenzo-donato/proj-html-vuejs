@@ -1,0 +1,715 @@
+/* STYLE CSS: Pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* STYLE CSS: Header  */
+header{
+    height: 650px;
+    background-color: #1f2154;
+}
+
+/* STYLE CSS: Header Nav-bar  */
+header .nav-bar{
+    padding: 10px 100px;
+    margin: auto;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav-bar img{
+    height: 30px;
+    margin-right: 80px ;
+}
+
+header .nav-bar .box-right{
+    display: flex;
+    align-items: center;
+}
+
+header .nav-bar .box-right ul {
+    display: flex;
+    list-style: none;
+}
+
+header .nav-bar .box-right ul li {
+    margin: 10px;
+    color:white;
+    cursor: pointer;
+}
+
+header .nav-bar .box-right ul li span{
+    margin-right: 2px;
+}
+
+header .nav-bar .box-right ul li span:hover{
+    text-decoration: underline white;
+}
+
+header .nav-bar .box-right ul li ul {
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.371);
+    margin-top: 15px;
+    margin-left: -55px;
+}
+
+header .nav-bar .box-right ul li ul li:hover{
+    text-decoration: underline white;
+}
+
+header .nav-bar .box-right i {
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+header .nav-bar .box-right i.riduzione{
+    font-size: 12px;
+}
+
+header .nav-bar .box-right i.carrello{
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+header .nav-bar .box-right i.carrello i{
+    position: absolute;
+    margin-top:  -10px;
+    margin-left: -6px;
+}
+
+header .nav-bar .box-right i.carrello span{
+    position: absolute;
+    color: black;
+    margin-top: 2px;
+    margin-left: -11.5px;
+    font-size: 13px;
+}
+
+header .nav-bar .box-right .box-search-bar{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+header .nav-bar .box-right .box-search-bar input{
+    border: none;
+    font-size: 15px;
+}
+
+header .nav-bar .box-right .box-search-bar input:focus{
+    outline: none;
+}
+
+header .nav-bar .box-right .box-search-bar i{
+    color: #1fad96;
+}
+/* END STYLE CSS: Header Nav-bar  */
+
+/* STYLE CSS: Header Jumbotrom  */
+.box-jumbo{
+    height: 571px;
+    overflow:hidden ;
+}
+
+/* STYLE CSS: Jumbo info */
+.box-jumbo #info-jumbo{
+    margin: auto;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.box-jumbo #info-jumbo h1{
+    font-size: 40px;
+}
+
+.box-jumbo #info-jumbo p{
+    margin: 10px 0px;
+}
+
+.box-jumbo #info-jumbo button{
+    padding: 12px 25px;
+    background-color: #1fad96;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+.box-jumbo #info-jumbo button:focus{
+    outline: none;
+}
+
+.box-jumbo #info-jumbo button:hover{
+    color: #1fad96;
+    background-color: white;
+}
+/* END STYLE CSS: Jumbo info  */
+
+/* STYLE CSS: Jumbo img  */
+#box-jumbo-img-info{
+    display: flex;
+    margin-top: -250px;
+    margin-left: 10px;
+}
+
+#box-jumbo-img-info div{
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 340px;
+    margin-top: -10px;
+    box-shadow: 10px 10px 10px  rgba(165, 134, 134, 0.275);
+}
+
+#box-jumbo-img-info div img#img-center-left {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#box-jumbo-img-info div:hover {
+    padding: 10px;
+}
+
+#box-jumbo-img-info div img#img-center-right {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+#box-jumbo-img-info img.img-left{
+    margin-left: 22px;
+    margin-top: -59px;
+    height: 450px;
+}
+
+#box-jumbo-img-info img.img-right{
+    margin-left: 633px;
+    margin-top: 200px;
+    height: 350px;
+}
+/*END STYLE CSS: Jumbo img  */
+
+/* STYLE CSS: Main  */
+#info-main-top{
+    width: 100%;
+    margin-top: 71px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#info-main-top h3{
+    width: 900px;
+    font-size: 30px;
+    text-align: center;
+    margin: 70px 0px 35px;
+}
+
+#info-main-top p{
+    color: lightgray;
+    font-size: 12px;
+    margin: 10px;
+}
+
+/* STYLE CCS: Info number  */
+#number-info{
+    display: flex;
+    margin: 70px;
+}
+
+#number-info .number-info-element{
+    width: 100%;
+    margin: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#number-info .number-info-element:hover{
+    background-color: rgba(165, 134, 134, 0.275);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#number-info .number-info-element p{
+    color: #1fad96;
+    font-size: 50px;
+}
+
+#number-info .number-info-element strong{
+    font-size: 10px;
+}
+/* END STYLE CCS: Info number  */
+
+/* STYLE CSS: Info services left */
+#box-service{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+#box-service .box-services-left{
+    flex-basis: 40%;
+    display: flex;
+}
+
+#box-service .box-services-left .service .top, .bottom{
+    margin: 15px;
+    padding:5px 10px;
+    box-shadow: 10px 10px 10px  lightgray;
+}
+
+#box-service .box-services-left .right{
+    margin-top: 45px;
+}
+/* END STYLE CSS: Info services left */
+
+/* STYLE CSS: Info services right  */
+.box-services-right{
+    flex-basis: 40%;
+}
+
+.box-services-right p{
+    margin: 10px 0px;
+}
+
+.box-services-right h2{
+    width: 300px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.box-services-right h2 span{
+    color: #1fad96;
+}
+
+.box-services-right ul{
+    list-style: none;
+}
+
+.box-services-right ul li{
+    margin: 10px 0px;
+}
+
+.box-services-right ul li i{
+    color: #1fad96;
+    margin-right: 5px;
+}
+
+.box-services-right button{
+    padding: 12px 25px;
+    background-color: #1fad96;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    margin-top: 25px;
+}
+
+.box-services-right button:focus{
+    outline: none;
+}
+
+.box-services-right button:hover{
+    background-color: #293259;
+}
+/*END STYLE CSS: Info services right  */
+
+/* STYLE CSS: Box-courses all*/
+#box-courses-all{
+    margin-top: 70px;
+    padding: 50px;
+    text-align: center;
+    background-color: #f6f3f6;
+}
+
+#box-courses-all .box-text-courses{
+    margin: 50px;
+}
+
+#box-courses-all .box-text-courses h2{
+    font-size: 35px;
+}
+
+#box-courses-all .box-text-courses h2 span{
+    color: #1fad96;
+}
+
+#box-courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    #box-courses .course{
+        flex-basis: calc(40%);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    #box-courses .course img{
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+    }
+
+    #box-courses .course .info-course{
+        width: 300px;
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    #box-courses .course:hover{
+        background-color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    
+    #box-courses .course .info-course #price{
+        color: #1fad96;
+        font-size: 20px;
+    }
+
+    #box-courses .course .info-course p span{
+        margin-right: 10px;
+    }
+
+    #box-courses-all button{
+        padding: 12px 50px;
+        background-color: #1fad96;
+        color: white;
+        border-radius: 3px;
+        border: none;
+        margin-top: 25px;
+    }
+    
+    #box-courses-all button:focus{
+        outline: none;
+    }
+    
+    #box-courses-all button:hover{
+        background-color: #293259;
+    }
+
+    #box-courses-all button i {
+        margin-left: 5px;
+    }
+/* END STYLE CSS: Box-courses */
+
+/* STYLE CSS: Box testimonial  */
+#testimonial{
+    margin: 50px;
+    padding: 20px;
+}
+
+#testimonial h2{
+    margin: 30px;
+    text-align: center;
+}
+
+#testimonial h2 span{
+    color: #1fad96;
+}
+
+#testimonial .box-testimonial{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#testimonial .box-testimonial .img-box-testimonial .sfondo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #e2a957;
+    margin-top: -165px;
+    margin-left: 15px;
+}
+
+#testimonial .box-testimonial .img-box-testimonial img.sopra{
+    position: absolute;
+    width: 120px;
+    border-radius: 100%;
+}
+
+#testimonial .box-testimonial .img-box-testimonial img.sotto{
+    width: 80px;
+    margin-top: 70px;
+    margin-left: 35px;
+}
+
+#testimonial .box-testimonial .info-testimonial{
+    width: 44%;
+    margin: 0px 50px;
+}
+
+#testimonial .box-testimonial .info-testimonial .info-member{
+    margin: -20px 0px 20px;
+    font-size: 25px;
+    color: black;
+}
+
+#testimonial .box-testimonial .info-testimonial strong:hover{
+    cursor: pointer;
+    text-decoration: underline black;
+}
+
+#testimonial .box-testimonial .info-testimonial p{
+    margin: 10px 0px;
+    color: black;
+}
+/* END STYLE CSS: Box testimonial  */
+
+/* STYLE CSS: Box clients */
+#box-clients{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#box-clients img{
+    height: 45px;
+    margin-right: 50px;
+    cursor: pointer;
+    padding: 5px
+}
+
+#box-clients img:hover{
+    opacity: 0.6;
+    padding: 3px;
+}
+/* END STYLE CSS: Box clients */
+
+/* STYLE CSS: Box-our-Blogs */
+#box-our-blogs{
+    width: 100%;
+    padding: 50px;
+    background-color: #f6f3f6;
+}
+
+#box-our-blogs .box-blogs-text{
+    text-align: center;
+    margin: 50px;
+}
+
+#box-our-blogs .box-blogs-text h2 span{
+    color: #1fad96;
+}
+
+#box-our-blogs .box-blogs-text p{
+    color: black;
+}
+
+#box-our-blogs .box-blogs-exemp{
+    display: flex;
+    justify-content: center;
+}
+
+#box-our-blogs .box-blogs-exemp .box-blog{
+    width: 300px;
+    margin: 0px 15px;
+    padding: 25px;
+}
+
+#box-our-blogs .box-blogs-exemp .box-blog:hover{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#box-our-blogs .box-blogs-exemp .box-blog img{
+    width: 250px;
+    border-radius: 10px;
+}
+
+#box-our-blogs .box-blogs-exemp .box-blog p{
+    margin: 10px 0px;
+    color: black;
+}
+
+#box-our-blogs .box-blogs-exemp .box-blog p span{
+    margin-right: 20px;
+}
+/* END STYLE CSS: Box-our-Blogs */
+
+/* STYLE CSS: Box help */
+#box-help{
+    width: 100%;
+    height: 780px;
+    margin: 50px;
+    background: linear-gradient( white 25%, #f6f3f600 25%,  #f6f3f6 50%);
+}
+
+#box-help .help-text{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#box-help .help-text p{
+    color: black;
+}
+
+#box-help .help-text h2{
+    font-size: 30px;
+}
+
+#box-help .help-text h2 span{
+    color: #1fad96;
+}
+
+#box-help .box-help-type{
+    display: flex;
+    padding: 0px 150px;
+}
+
+#box-help .box-help-type .help-type{
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+#box-help .box-help-type .help-type:hover{
+    background-color: #f6f3f6;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 10px white;
+}
+
+#box-help .box-help-type .help-type i{
+    font-size: 50px;
+}
+
+#box-help .box-help-type .help-type h4{
+    margin: 20px 0px;
+}
+
+#box-help .box-help-type .help-type p{
+    margin: 0px;
+    color: black;
+}
+
+#box-help img{
+    margin-top: 102px;
+    margin-left: 140px;
+}
+/* END STYLE CSS: Box help */
+
+/* STYLE CCS: Box start now  */
+#box-start-now{
+    text-align: center;
+    margin: 50px;
+}
+
+#box-start-now h4 span{
+    color: #1fad96;
+}
+
+#box-start-now h2{
+    margin: 5px 0px 20px;
+}
+
+
+#box-start-now button{
+    padding: 12px 25px;
+    background-color: #1fad96;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+#box-start-now button:focus{
+    outline: none;
+}
+
+#box-start-now button:hover{
+    color: white;
+    background-color: #293259;
+    cursor: pointer;
+}
+/* END STYLE CCS: Box start now  */
+
+/* STYLE.CSS:Footer */
+.box-footer{
+    width: 100%;
+    padding: 60px;
+    margin: 50px 0px;
+    background-color: #f6f3f6 ;
+}
+
+.box-footer  .box-footer-top{
+    display: flex;
+    justify-content: center;
+}
+
+.box-footer .box-footer-top .info-page-footer ul{
+    list-style: none;
+}
+
+.box-footer .box-footer-top .info-page-footer ul li{
+    font-size: 12px;
+    margin: 5px 0px;
+    margin-right: 40px;
+}
+
+.box-footer .box-footer-top .info-page-footer ul li:hover{
+    cursor: pointer;
+    text-decoration: underline #1fad96;
+}
+
+.box-footer .box-icons-link{
+    margin-left: 250px;
+}
+
+.box-footer .box-icons-link i{
+    color: lightgrey;
+    margin: 0px 20px 0px 0px;
+    font-size: 30px;
+}
+
+.box-footer .box-icons-link i:hover{
+    color: #1fad96;
+    cursor: pointer;
+}
+
+.box-footer .copyright{
+    margin: 50px;
+    text-align: center;
+    color: lightgray;
+    font-size: 13px;
+}
+/* END STYLE.CSS:Footer */
+
+/* STYLE CSS: Pulsante torna su  */
+.torna-su{
+    position: fixed;
+    color: #1fad96;
+    font-size: 50px;
+    padding: 20px;
+    margin-left: 1250px;
+    margin-top: 220px;
+}
+/* END STYLE CSS: Pulsante torna su  */
+
+/* STYLE CSS: Azioni comandate  */
+.hide{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+}

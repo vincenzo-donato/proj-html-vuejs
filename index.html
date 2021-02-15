@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>MaxCoach Learn At Your Own Pace - Remote Training By Vincenzo Donato Classe#24</title>
+        <!-- LINK: Font family -->
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <!-- SCRIPT: Collegamento Vue JS -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <!-- SCRIPT: Collegamento Axios  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+        <!-- LINK: Style CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- LINK: Font awesome  -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    </head>
+
+    <body>
+
+        <!-- CONTAINER: Box generale su cui applico Vue js  -->
+        <div id="Container-generale">
+            
+            <!-- CONTAINER: Header  -->
+            <header>
+
+                <!-- CONTAINER: Nav bar box  -->
+                <div class="nav-bar">
+
+                    <!-- CONTAINER: img left nav-bar  -->
+                    <img src="img/light-logo.png" alt="light-logo">
+                    <!--END CONTAINER: img left nav-bar  -->
+
+                    <!-- CONTAINER: Box container Box-right header nav-bar  -->
+                    <div class="box-right">
+                        <!-- CONTAINER: Lista menù navigabile nav bar left  -->
+                        <ul>
+                            <li v-for='(menù, index) in navBar'>
+                                <span>{{menù.type}}</span>
+                                <i @click='openMenù(index)' class=" riduzione fas fa-angle-down"></i>
+                                <ul :class='(counter == index) ? "show" : "hide"' >
+                                    <li v-for = '(tendina, i) in menù.menu'>{{tendina}}</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- END CONTAINER: Lista menù navigabile nav bar left  -->
+
+                        <!-- Icone nav bar left -->
+                        <i class="carrello fas fa-shopping-cart"><i class="fas fa-circle"><span>0</span></i></i>
+                        <i class="far fa-user-circle"></i>
+                        <!-- Fine Icone nav bar left -->
+
+                        <!-- CONTAINER: Box search nav-bar left  -->
+                        <div class="box-search-bar">
+                            <input type="text" placeholder="Search..." name="" id="">
+                            <i class=" lightblue fas fa-search"></i>
+                        </div>
+                        <!-- END CONTAINER: Lista menù navigabile nav bar left  -->
+
+                    </div>
+                    <!-- END CONTAINER: Box container Box-right header nav-bar  -->
+
+                </div>
+                <!--END CONTAINER: Nav bar box  -->
+                
+                <!-- CONTAINER: Jumbotron-Header -->
+                <div class="box-jumbo">
+                    <!-- CONTAINER: Info jumbo-header page  -->
+                    <div id="info-jumbo">
+                        <h1>Learn At Your Own Pace</h1>
+                        <p>Get teamed up with people of the some will.</p>
+                        <button> <strong>Get started for free</strong> </button>
+                    </div>
+                    <!-- END CONTAINER: Info jumbo-header page  -->
+
+                    <!-- ONDA  -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a2d9ff" fill-opacity="0.1" d="M0,192L26.7,165.3C53.3,139,107,85,160,64C213.3,43,267,53,320,85.3C373.3,117,427,171,480,186.7C533.3,203,587,181,640,149.3C693.3,117,747,75,800,90.7C853.3,107,907,181,960,192C1013.3,203,1067,149,1120,149.3C1173.3,149,1227,203,1280,218.7C1333.3,235,1387,213,1413,202.7L1440,192L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+                    <!--END ONDA  -->
+                    
+                    <!-- CONTAINER: Box img jumbo  -->
+                    <div id="box-jumbo-img-info">
+                        <!-- img sinistra  -->
+                        <img id="img-size" class="img-left" src="img/home-6-hero-left-person.png" alt="img/left">
+                        <!-- end img sinistra  -->
+                        
+                        <!-- box img centro  -->
+                        <div>
+                            <img id="img-center-left" src="img/home-6-hero-poster-final.jpg" alt="img/center">
+                            <img id="img-center-right" src="img/icon-youtube-play.png" alt="">
+                        </div>
+                        <!--end box img centro  -->
+                        
+                        <!-- img destra  -->
+                        <img id="img-size" class="img-right" src="img/home-6-hero-right-person-195x300.png" alt="img/rigth">
+                        <!-- end img destra  -->
+                        
+                        <!-- pul up  -->
+                        <a href="index.html" class="torna-su"><i class="far fa-arrow-alt-circle-up"></i></a>
+                        <!-- end pul up  -->
+
+                    </div>
+                    <!-- END CONTAINER: Box img jumbo  -->
+
+                </div>
+                <!-- END CONTAINER: Jumbotron-Header -->
+                
+            </header>
+            <!-- END CONTAINER: Header  -->
+
+            <!-- CONTAINER: Main  -->
+            <main>
+                <!-- CONTAINER: Info main  -->
+                <div id="info-main-top">
+
+                    <!-- Info text page  -->
+                    <h3>Let passion and determination be the guide along the way and develop at your own pace that's comfortable</h3>
+                    <h5>FANNIE MOREDN</h5>
+                    <p>/Founder & CEO</p>
+                    <!-- End info text page  -->
+
+                    <!-- CONTAINER: Number info  -->
+                    <div id="number-info">
+                        <div v-for='info in numberInfo' class="number-info-element">
+                            <p>{{info.numero}}</p>
+                            <strong>{{info.info}}</strong>
+                        </div>
+                    </div>
+                    <!-- END CONTAINER: Number info  -->
+
+                    <!-- CONTAINER: Box services -->
+                    <div id="box-service">
+
+                        <!-- CONTAINER: Box services left  -->
+                        <div class="box-services-left">
+
+                            <!-- CONTAINER:Service left -->
+                            <div class="service">
+
+                                <div class="top">
+                                    <h4>Graphic Design</h4>
+                                    <p>Have a passion for graphics and arts? show you talents with confidence and salf-assertiveness.</p>
+                                    <img src="img/home-6-service-image-01.png" alt="">
+                                </div>
+
+                                <div class="bottom">
+                                    <img src="img/home-6-service-image-03.png" alt="">
+                                    <h4>Idea Discussion</h4>
+                                    <p>Get teamed up with the specialists who work and teach coding for years at famous universities.</p>
+                                </div>
+
+                            </div>
+                            <!-- END CONTAINER:Service left-->
+
+                            <!-- CONTAINER:Service right -->
+                            <div class="service right">
+                                
+                                <div class="top">
+                                    <h4>Business Administration</h4>
+                                    <p>Learners are encouraged to study the mechanism and structure of system administration.</p>
+                                    <img src="img/home-6-service-image-02.png" alt="">
+                                </div>
+
+                                <div class="bottom">
+                                    <img src="img/home-6-service-image-04.png" alt="">
+                                    <h4>Web Development</h4>
+                                    <p>Learn to strat building a webpage from scratch. Yuo decide you own pace, course and speed.</p>
+                                </div>
+
+                            </div>
+                            <!--END CONTAINER:Service right -->
+                            
+                        </div>
+                        <!-- END CONTAINER: Box services left  -->
+                        
+                        <!-- CONTAINER: Box services right info -->
+                        <div class="box-services-right">
+                            <p>TOGETHER WE CAN CREATE</p>
+                            <h2>Services We <span>Can Provide</span> For My Clients.</h2>
+                            <ul>
+                                <li v-for = 'check in checks'><i class="fas fa-check"></i><span>{{check}}</span></li>
+                            </ul>
+                            <button>Get started for free</button>
+                        </div>
+                        <!-- END CONTAINER: Box services right info -->
+
+                    </div>
+                    <!--END CONTAINER: Box services -->
+
+                    <!-- CONTAINER: Box Courses -->
+                    <div id="box-courses-all">
+                        
+                        <!-- CONTAINER: Text course intro  -->
+                        <div class="box-text-courses">
+                            <p>CHOOSE A COURSE TO GET STARTED</p>   
+                            <h2>Latest Featured <span>Courses</span></h2>
+                        </div>
+                        <!-- CONTAINER: Text course intro  -->
+                        
+                        <!-- CONTAINER: Box Courses type -->
+                        <div id="box-courses">
+                            <div v-for='corsi in courses' class="course">
+                                <img :src="'img/' + corsi.img " alt="">
+                                <div class="info-course">
+                                    <p id="price">{{corsi.price}}</p>
+                                    <h4>{{corsi.info}}</h4>
+                                    <p><span><i class="fas fa-atlas"></i> {{corsi.infoCourse[0]}}</span> <span><i class="far fa-user"></i> {{corsi.infoCourse[1]}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button> <strong>View all courses</strong> <i class="fas fa-arrow-right"></i></button>
+                        <!-- CONTAINER: Box Courses type -->
+
+                    </div>
+                    <!-- END CONTAINER: Box Courses -->
+
+                    <!-- CONTAINER: Box testimonial -->
+                    <div id="testimonial">
+
+                        <!-- Title section  -->
+                        <h2>Why People Talk About <span>MaxCoach</span>?</h2>
+
+                        <!-- CONTAINER: Box testimonial foto e info  -->
+                        <div class="box-testimonial">
+
+                            <!-- CONTAINER: Box testimonial foto  -->
+                            <div class="img-box-testimonial">
+                                <img class="sopra" :src="'img/' + testimonial[position].photo " alt="">
+                                <img class="sotto" src="img/maxcoach-shape-05.png" alt="">
+                                <div class="sfondo"></div>
+                            </div>
+                            <!-- END CONTAINER: Box testimonial foto  -->
+
+                            <!-- CONTAINER: Box info  -->
+                            <div class="info-testimonial">
+                                <p class="info-member">{{testimonial[position].info}}</p>
+                                <strong class="name-testimonial">{{testimonial[position].name}}</strong>
+                                <p>{{testimonial[position].title}}</p>
+                            </div>
+                            <!-- END CONTAINER: Box info  -->
+
+                        </div>
+                        <!-- END CONTAINER: Box testimonial foto e info  -->
+
+                    </div>
+                    <!-- END CONTAINER: Box testimonial -->
+
+                    <!-- CONTAINER: Box clients  -->
+                    <div id="box-clients">
+                        <img v-for='client in clients' :src="'img/' + client" alt="">
+                    </div>
+                    <!-- END CONTAINER: Box clients  -->
+
+                    <!-- CONTAINER: Box last Blogs -->
+                    <div id="box-our-blogs">
+
+                        <div class="box-blogs-text">
+                            <p>ENJOY READINDG ON MAXCOACH</p>
+                            <h2>Latest on <span>Our Blogs</span> </h2>
+                        </div>
+
+                        <div class="box-blogs-exemp">
+                            <div v-for='blog in blogs' class="box-blog">
+                                <img :src="'img/' + blog.img " alt="">
+                                <p>{{blog.class}}</p>
+                                <h4>{{blog.info}}</h4>
+                                <p><span><i class="far fa-calendar"></i>{{blog.view[0]}}</span><span><i class="far fa-eye"></i>{{blog.view[1]}}</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END CONTAINER: Box last Blogs -->
+
+                    <!-- CONTAINER: Box-help  -->
+                    <div id="box-help">
+                        <div class="help-text">
+                            <p>WANNA TRANSFORM YOU LIFE?</p>
+                            <h2>Glad to <span>Help You</span> Learn</h2>
+                        </div>
+                        <div class="box-help-type">
+                            <div v-for='help in linkHelps' class="help-type">
+                                <i :class= "help.icon"></i>
+                                <h4>{{help.type}}</h4>
+                                <p>{{help.info}}</p>
+                            </div>
+                        </div>
+                        <img src="img/home-6-services-image-1024x411.png" alt="">
+                    </div>
+                    <!-- END CONTAINER: Box-help  -->
+
+                    <!-- CONTAINER: Box start now  -->
+                    <div id="box-start-now">
+                        <h4>Start today for getting <span>Online Certification</span> </h4>
+                        <h2>You can be your own guilding start with our help</h2>
+                        <button>Get started now</button>
+                    </div>
+                    <!-- END CONTAINER: Box start now  -->
+
+                </div>
+                <!-- END CONTAINER: Info main  -->
+
+            </main>
+            <!--END CONTAINER: Main  -->
+
+            <!-- FOOTER -->
+            <footer>
+                    
+                <!-- CONTAINER: Box Footer  -->
+                <div class="box-footer">
+
+                    <div class="box-footer-top ">
+                        <div v-for= 'info in infoFooter' class="info-page-footer">
+                            <h5>{{info.id}}</h5>
+                            <ul>
+                                <li v-for= 'listaInfo in info.address'>{{listaInfo}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="box-icons-link">
+                        <i v-for='icon in iconsSocial' :class="icon"></i>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2020 Maxcoach. All Rights Reserved</p>
+                    </div>
+                </div>
+                <!-- END CONTAINER: Box Footer  -->
+
+            </footer>
+            <!-- FOOTER  -->
+
+        </div>
+        <!--END CONTAINER: Box generale su cui applico Vue js  -->
+        
+        <!-- SCRIPT: Collegamento Script  -->
+        <script src="js/script.js" charset="utf-8"></script>
+
+    </body>
+</html>
